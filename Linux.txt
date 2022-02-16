@@ -1,0 +1,94 @@
+tip: 
+- https://www.astrouw.edu.pl/~jskowron/pracownia/komendy/
+- używać TAB do uzupełniania poleceń
+
+
+Zadanie 1. Sprawdzenie komend
+cd --> umożliwa zmianę katalogu lub powrót do folderu głównego np. /home/lubuntu
+pwd --> wyświetla aktualną lokalizację
+ls –al --> wyświetla zwartość folderu w którym się znajdujemy
+
+cd . --> nic nie robi
+pwd --> wyświetla aktualną lokalizację
+cd .. --> cofa do poprzedniej lokalizacji
+ls -al --> wyświetla zwartość folderu w którym się znajdujemy
+cd .. --> cofa do poprzedniej lokalizacji
+pwd --> wyświetla aktualną lokalizację
+ls -al --> wyświetla zwartość folderu w którym się znajdujemy
+
+cd .. --> cofa do poprzedniej lokalizacji
+pwd --> wyświetla aktualną lokalizację
+
+cd /etc --> przenosi do katlogu /etc
+ls -al | more --> wyświetla całą zawartość katalogu (przewijany podgląd)
+cat passwd --> informacje o użytkownikach którzy mieli dostęp do systemu
+cd - --> powrót do ostatniej lokalizacji (pozwala przenosić się pomiędzy dwoma lokalizacjami)
+pwd --> wyświetla aktualną lokalizację
+
+Zadanie 2. W swoim katalogu domowym stwórz katalogi praca i cwiczenia. Następnie w katalogu praca stwórz plik hello.txt i zapisz do niego tekst „Hello World”. Wyświetl go w terminalu. Skopiuj plik hello.txt do katalogu cwiczenia, a następnie usuń katalog praca. Dopisz do pliku hello.txt linie o treści:
+- na początku pliku: „This should be in front”,
+- na końcu pliku: „This should be on the end”.
+dla katalogu home/lubuntu/Desktop/testowy
+mkdir praca --> stworzenie katalogu "praca"
+mkdir cwiczenia --> stworzenie katalogu "cwiczenia"
+cd praca --> przejście do katalogu "praca"
+touch hello.txt --> stworzenie pliku "hello.txt"
+nano hello.txt --> przejście do edytora plików ["Hello World"]
+cat hello.txt --> wyświetlenie zawartości pliku "hello.txt"
+cd.. --> powrót do folderu "testowy"
+rm -r praca --> usunięcie folderu "praca"
+cd cwiczenia --> przejście do katalogu "cwiczenia"
+nano hello.txt --> przejście do edytora plików ["This should be in front" "This should be on the end"]
+cat hello.txt --> wyświetlenie zawartości pliku "hello.txt"
+
+
+Zadanie 3. Poeksperymentuj z komendą ls
+Co robią opcje: d, i, R, F?
+ls -d --> wyświetla tylko nazwy katalogów, tak jak zwyczajnych plików, czyli nie listuje ich zawartości
+ls -i --> informacje o uprawnieniach użytkownika do plików
+ls -R --? listuje katalogi rekursywnie (czyli wyświetla również zawartość podkatalogów)
+ls -F --> informacje o folderach
+
+Zadanie 4. Wyświetl manual funkcji grep.
+Wyświetl pierwszych dziesięć i ostatnich pięć linii tego manualu.
+man grep --> manual funkcji grep
+man grep | head -10 --> wyświetlenie 10 pierwszych linii manuala
+man grep | tail -5 --> wyświetlenie 5 ostatnich linii manuala
+
+
+
+
+Zadanie 5. Za pomocą funkcji grep znajdź wszystkie linie ze słowem "Started" w pliku „boot.log”.
+
+Zadanie 6. Użyj komendy find , żeby:
+- wyświetlić nazwy wszystkich plików w katalogu /home (lub /Users dla systemu Mac),
+- wyświetlić nazwy plików większych niż 1 MB,
+- wyświetlić posortowane nazwy wszystkich plików, które zawierają słowo hello (potrzebne będą też funkcje grep i sort).
+
+Zadanie 7. Znajdź dzięki komendzie find następujące rzeczy:
+- wszystkie pliki stworzone dzisiaj (zapisz do all_today),
+- wszystkie pliki ze słowem net w nazwie, znajdujące się w katalogu /etc (zapisz do find_etc).
+Zapamiętaj wynik wyszukiwania do pliku dzięki użyciu przekierowań.
+
+Zadanie 8. Dodaj nowego użytkownika (nie zapomnij ustawić mu hasła).
+Zaloguj się jako ten użytkownik
+
+Zadanie 9. Dodaj nową grupę użytkowników.
+Dodaj użytkownika z zadania 8. i swojego normalnego użytkownika do niej.
+
+Zadanie 10. Stwórz w swoim katalogu domowym plik tekstowy (zawierający jakikolwiek tekst), a następnie:
+- Bądź zalogowany jako użytkownik z zadania 8., dodaj mu dostęp rwx tylko dla siebie. Zaloguj się jako zwykły użytkownik i spróbuj edytować plik.
+- Bądź zalogowany jako użytkownik z zadania 8., dodaj mu dostęp dla wszystkich. Zaloguj się jako zwykły użytkownik i spróbuj edytować plik.
+- Bądź zalogowany jako użytkownik z zadania 8., dodaj mu dostęp dla grupy z zadania 9. (pamiętaj o zabraniu dostępu dla wszystkich). Zaloguj się jako zwykły użytkownik i spróbuj edytować plik.
+Potestuj różne możliwości dostępów (np. tylko do odczytu).
+
+Zadanie 11. Usuń użytkownika z zadania 8 z systemu.
+- Zobacz, co się stało z jego katalogiem domowym.
+- Zobacz, kto należy do grupy użytkowników z zadania 9.
+- Usuń tę grupę.
+
+Zadanie 12. Otwórz dwa terminale.
+- W jednym uruchom komendę sleep 1000.
+- A w drugim spróbuj ją odnaleźć wśród procesów odpalonych na twoim komputerze.
+- Zabij ją.
+Co się stało na drugim terminalu?
